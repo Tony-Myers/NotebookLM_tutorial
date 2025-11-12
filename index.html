@@ -1,414 +1,362 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI for Students: The Complete Guide to NotebookLM (2025)</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        header {
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            color: #1a73e8;
-            font-size: 2.5em;
-            margin-bottom: 0.25em;
-        }
-        h2 {
-            color: #1a73e8;
-            font-size: 1.8em;
-            border-bottom: 1px solid #eee;
-            padding-top: 15px;
-            margin-top: 40px;
-        }
-        h3 {
-            color: #202124;
-            font-size: 1.4em;
-            margin-top: 30px;
-        }
-        p {
-            font-size: 1.05em;
-            margin-bottom: 15px;
-        }
-        ul, ol {
-            margin-bottom: 15px;
-            padding-left: 25px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        code {
-            background-color: #f0f0f0;
-            color: #c7254e;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        }
-        blockquote {
-            border-left: 4px solid #1a73e8;
-            background-color: #f4f8ff;
-            padding: 10px 20px;
-            margin: 20px 0;
-            font-style: italic;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            font-size: 0.95em;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-            color: #333;
-            font-weight: 600;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-       .container {
-            padding: 0 20px;
-        }
-       .note {
-            background-color: #fff9e6;
-            border: 1px solid #ffde8a;
-            border-radius: 4px;
-            padding: 15px;
-            margin-top: 20px;
-        }
-       .note-title {
-            font-weight: bold;
-            color: #5c4100;
-        }
-       .workflow-step {
-            font-weight: bold;
-            color: #1a73e8;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Students: NotebookLM Complete Tutorial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family:'Inter',sans-serif; background:#f8fafc; color:#1e293b }
+    .nav-link { transition:color .3s,border-color .3s,background-color .3s; border-bottom:2px solid transparent; cursor:pointer; border-radius: 4px; }
+    .nav-link.active,.nav-link:hover { color:#0369a1; border-bottom-color:#0369a1; background-color: rgba(3, 105, 161, 0.1); }
+    .nav-link:focus, button:focus, a:focus, input:focus { outline: 3px solid #0369a1; outline-offset: 2px; }
+    .feature-card { transition:transform .3s,box-shadow .3s }
+    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,.05), 0 4px 6px -4px rgba(0,0,0,.05); }
+    /* Style for checked checklist items */
+    input[type="checkbox"]:checked + span { text-decoration: line-through; color: #64748b; }
+    .step-number { width: 40px; height: 40px; flex-shrink: 0; }
+  </style>
 </head>
-<body>
-    <main>
-        <header>
-            <h1>AI for Students: The Complete Guide to NotebookLM (2025)</h1>
-            <p>Welcome to the complete guide for Google's NotebookLM. This tool has evolved far beyond a simple note-taker. It's now a powerful, AI-driven research assistant that can help you understand complex topics, write papers, and create study materials from all your course content—including text, videos, and lectures. This guide covers everything you need to know.</p>
-        </header>
+<body class="bg-slate-50 text-slate-800">
 
-        <div class="container">
-            <section id="what-is">
-                <h2>Section 1: What is NotebookLM (and Why Is It Different)?</h2>
-                
-                <h3>1.1. The "Grounded AI" Concept: No Hallucinations</h3>
-                <p>This is the most important thing you need to understand about NotebookLM. Unlike other AI chatbots, NotebookLM is <strong>grounded ONLY in the sources you provide it</strong></p>
-                <p>What does this mean for you? When you ask a question, the AI doesn't search the entire internet. It generates its answer *exclusively* from the documents, videos, and files you've added to that specific notebook. This has two massive advantages for academic work:</p>
-                <ul>
-                    <li><strong>No AI "Hallucinations":</strong> The AI can't make up facts or invent sources. Its knowledge is limited to what you've given it, making it a reliable tool for studying specific material.</li>
-                    <li><strong>Verifiable Answers:</strong> Every answer the AI gives is linked back to your original source material with <strong>citations</strong>. You can instantly click to verify the information, which is critical for writing papers and checking facts.</li>
-                </ul>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-                <h3>1.2. Your Privacy is Protected</h3>
-                <p>For students and researchers, data privacy is essential. NotebookLM is designed for this: <strong>your personal data, including your source uploads and chat history, is not used to train the AI model</strong>.[9, 15, 17] What you put into your private notebook stays in your private notebook.</p>
-                <div class="note">
-                    <p><span class="note-title">Important Note:</span> To use NotebookLM, you must be at least 18 years of age and sign in with a Google account.</p>
-                </div>
+  <div class="bg-black text-white rounded-xl p-12 text-center space-y-4 mb-8">
+    <h2 class="text-3xl font-bold">Master NotebookLM for Academic Success</h2>
+    <p class="max-w-3xl mx-auto">Transform your course materials into interactive study resources with Google's AI-powered research assistant. Create audio summaries, study guides, quizzes, flashcards, and more.</p>
+  </div>
 
-                <h3>1.3. Core Use Cases for Students</h3>
-                <p>NotebookLM is built to help you:</p>
-                <ul>
-                    <li><strong>Power Your Study Sessions:</strong> Upload lecture notes, textbook chapters, and research papers. Ask the AI to explain complex concepts, provide summaries, or generate study guides.</li>
-                    <li><strong>Organize Your Thinking:</strong> Upload all your source material for a project and let NotebookLM create outlines, timelines, or mind maps to help you structure your thoughts.</li>
-                    <li><strong>Spark New Ideas:</strong> Upload brainstorming notes and market research. Ask NotebookLM to identify trends, find connections, and suggest new angles for your project.</li>
-                </ul>
+  <div id="intro" class="bg-white p-8 rounded-xl shadow-lg mb-12 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">🎯 Why NotebookLM Is Perfect for Students</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold text-sky-700 mb-3">Unique Advantages</h3>
+        <ul class="list-disc list-inside space-y-2 text-slate-700">
+          <li><strong>Grounded responses:</strong> Only uses your uploaded materials.</li>
+          <li><strong>Citations included:</strong> Shows exact source for every answer.</li>
+          <li><strong>No hallucinations from web:</strong> Stays faithful to your documents.</li>
+          <li><strong>Completely free:</strong> No subscription needed.</li>
+          <li><strong>Multiple formats:</strong> Upload PDFs, videos, audio, websites.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-sky-700 mb-3">Perfect For</h3>
+        <ul class="list-disc list-inside space-y-2 text-slate-700">
+          <li>Creating revision materials from lecture notes.</li>
+          <li>Understanding complex readings and textbooks.</li>
+          <li>Preparing for exams with practice questions.</li>
+          <li>Synthesising information across multiple sources.</li>
+          <li>Processing recorded lectures and videos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-                <h3>1.4. Understanding the Interface</h3>
-                <p>The NotebookLM web interface is typically split into three columns:</p>
-                <ol>
-                    <li><strong>Sources Panel (Left):</strong> This is where you add and see all your uploaded files (PDFs, Docs, video links, etc.).</li>
-                    <li><strong>Chat Panel (Center):</strong> This is where you have your conversation with the AI. You ask questions here, and it provides answers with citations.</li>
-                    <li><strong>Notes Panel (Right):</strong> This is your digital notebook. You can save useful AI responses or write your own notes and thoughts here.</li>
-                </ol>
-                <p>Crucially, there is also a <strong>"Studio Panel"</strong> (often a tab). This is where you move from *processing* information to *creating* new content. The Studio is where you will find powerful generative tools like Video Overviews, Audio Overviews, Quizzes, and Mind Maps. We will cover this in detail in Section 5.</p>
-            </section>
-
-            <section id="getting-started">
-                <h2>Section 2: Getting Started: Your First Notebook</h2>
-                
-                <h3>2.1. Access and Setup</h3>
-                <p>Getting started is simple:</p>
-                <ol>
-                    <li>Navigate to the official NotebookLM website: <code>notebooklm.google.com</code>.[19]</li>
-                    <li>Sign in with your personal Google account. (Remember, you must be 18 or older ).</li>
-                </ol>
-
-                <h3>2.2. Creating a Notebook</h3>
-                <p>A "notebook" is a container for a single project or topic. For example, you might create one notebook for "Biology 101" and another for your "History Thesis."</p>
-                <p>To create a new notebook, simply click the "New Notebook" button. You'll be prompted to add your first sources.</p>
-
-                <h3>2.3. Featured & Public Notebooks</h3>
-                <p>If you want to see NotebookLM in action before uploading your own files, check out the "Featured Notebooks". Google has partnered with organizations like OpenStax to provide pre-loaded notebooks on academic subjects like Biology, Psychology, and Business. This is a great, safe way to test the tool's capabilities.</p>
-            </section>
-
-            <section id="inputs">
-                <h2>Section 3: Step-by-Step: Adding Your Sources (The Inputs)</h2>
-                <p>This is the "Input" phase of your workflow. The power of NotebookLM is directly proportional to the quality and focus of your sources. A notebook with 50 focused sources will give you better results than one with one random, 500-page file.</p>
-                
-                <h3>3.1. How to Add Sources</h3>
-                <p>Inside your notebook, you will see an "Add Source" button. Clicking this will give you a menu of all the types of content you can add.</p>
-
-                <h3>3.2. Supported Source Types (The "Menu")</h3>
-                <p>Here is a breakdown of the most common source types and how students can use them. NotebookLM supports up to 50 sources per notebook.</p>
-
-                <table>
-                    <caption>Table 1: NotebookLM Supported Source Types & Student Use Cases</caption>
-                    <thead>
-                        <tr>
-                            <th>Source Type</th>
-                            <th>How to Add</th>
-                            <th>Key Student Use Case</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>PDFs & Text Files</strong> (.pdf,.txt,.md)</td>
-                            <td>Upload from computer</td>
-                            <td>Uploading textbook chapters, research papers, your syllabus, or exported articles.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Google Docs & Slides</strong></td>
-                            <td>Connect to Google Drive</td>
-                            <td>Integrating your own class notes, essay drafts, or lecture slides from your professors.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Web URLs</strong></td>
-                            <td>Paste a website link</td>
-                            <td>Capturing news articles, blog posts, and online encyclopedias for your research.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Pasted Text</strong></td>
-                            <td>Copy and paste directly</td>
-                            <td>Quickly adding small notes, quotes, or ideas you want the AI to analyze.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>YouTube URLs</strong></td>
-                            <td>Paste a public YouTube link</td>
-                            <td><strong>New:</strong> Adding a video lecture, documentary, or tutorial. NotebookLM <strong>transcribes the video's audio</strong> into text for you to search and analyze.[11, 13, 20]</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Audio Files</strong> (.mp3,.wav, etc.)</td>
-                            <td>Upload from computer</td>
-                            <td><strong>New:</strong> Uploading a lecture you recorded (with permission!), an interview, or a podcast. NotebookLM <strong>transcribes the audio</strong> for you.</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>3.3. Deep Dive: Using Video and Audio Sources</h3>
-                <p>The ability to add video and audio is a game-changer for students. Here’s how to do it:</p>
-
-                <h4>How to Add a YouTube Video:</h4>
-                <ol>
-                    <li>In your notebook, click <strong>"Add Source"</strong>.</li>
-                    <li>Select the <strong>"YouTube"</strong> option.</li>
-                    <li>Copy the full URL of the public YouTube video you want to add.</li>
-                    <li>Paste the URL into the field and click <strong>"Insert"</strong>.</li>
-                    <li>NotebookLM will process the video, extract the transcript, and add it as a source. You can now ask questions like, "What were the three main points from the YouTube lecture?"</li>
-                </ol>
-
-                <h4>How to Add an Audio File:</h4>
-                <ol>
-                    <li>In your notebook, click <strong>"Add Source"</strong>.</li>
-                    <li>Select <strong>"Upload files"</strong> (or similar option for local files).</li>
-                    <li>Choose the <code>.mp3</code>, <code>.wav</code>, or other supported audio file from your computer.[13, 14]</li>
-                    <li>NotebookLM will upload and transcribe the file, turning the spoken words into a searchable text source.[12]</li>
-                </ol>
-
-                <div class="note">
-                    <p><span class="note-title">Limitations to Know:</span></p>
-                    <ul>
-                        <li><strong>YouTube:</strong> Videos must be public.[11] Brand new videos (e.g., uploaded in the last few hours) may not be available for import yet.[23]</li>
-                        <li><strong>Audio:</strong> The file must contain speech. An audio file of music or silence will not be supported.[13]</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="process">
-                <h2>Section 4: Interacting with Your Sources (The Process)</h2>
-                <p>This is the "Process" phase. Now that your sources are loaded, you can use the AI chat to actively read, understand, and engage with your material.</p>
-
-                <h3>4.1. How to Ask Good Questions</h3>
-                <p>At the bottom of the screen, you'll find the chat bar.[19] You can start by clicking one of the "Suggested questions" that the AI generates based on your sources, or you can type your own.</p>
-                <p><strong>Good Student Prompts:</strong></p>
-                <ul>
-                    <li>"Summarize the main argument in."</li>
-                    <li>"Explain the concept of 'quantum entanglement' using simple terms, based on all sources."</li>
-                    <li>"What are the key differences between the argument in and?"</li>
-                    <li>"Create a timeline of the events described in my history notes."</li>
-                </ul>
-
-                <h3>4.2. The Most Important Feature: Citations</h3>
-                <p>As mentioned in Section 1, every answer from NotebookLM comes with blue citation numbers, like <code></code>, <code></code>.</p>
-                <blockquote>
-                    <p><strong>AI Response Example:</strong> "The study found that photosynthesis is impacted by light intensity <code></code> and carbon dioxide levels <code></code>. A follow-up study also noted the effect of temperature <code></code>."</p>
-                </blockquote>
-                <p><strong>This is the tool's superpower.</strong> Clicking <code></code>, <code></code>, or <code></code> will <strong>instantly take you to the exact passage in your original source document</strong> where the AI found that information.[12, 15] This allows you to maintain academic integrity, build your bibliography, and double-check the AI's work in seconds.</p>
-
-                <h3>4.3. Using the "Notes" Panel</h3>
-                <p>As you chat with the AI, you'll get some "Aha!" moments and useful summaries. When you see a response you want to keep, you can "pin" it or save it to your Notes panel on the right.[2, 22] You can also type your own thoughts and ideas in the Notes panel. This is how you build your own study guide or research log as you work.</p>
-            </section>
-
-            <section id="outputs">
-                <h2>Section 5: The Studio Panel: Generating New Content (The Outputs)</h2>
-                <p>This is the "Output" phase, and it's where NotebookLM truly shines. This section directly addresses the new video, audio, and study tools.</p>
-                <p>The <strong>Studio Panel</strong> (or "Notebook Guide") is where you go beyond Q&A to *create* new, shareable content *from* your sources.[1, 2, 5] You're no longer just asking questions; you're telling the AI to *make* something for you.</p>
-
-                <h3>5.1. The Game-Changer: Generating Video Overviews</h3>
-                <p>This is the feature you've been waiting for. NotebookLM can turn your dense research documents into a short, digestible "explainer video."</p>
-                <ul>
-                    <li><strong>What it is:</strong> An AI-generated video, typically a few minutes long, that summarizes your source material. It is narrated by an AI voice and will dynamically <strong>pull in images, diagrams, key quotes, and numbers directly from your source files</strong> (like Google Slides or PDFs) to illustrate its points.</li>
-                    <li><strong>How-to (Step-by-Step):</strong>
-                        <ol>
-                            <li>Load your sources (this works best with visually-rich sources like textbooks or presentations).</li>
-                            <li>Navigate to the <strong>"Studio"</strong> panel.[4, 8]</li>
-                            <li>Select <strong>"Video Overview"</strong>.</li>
-                            <li>(Optional) You can often customize the video by specifying topics to focus on or describing the target audience (e.g., "explain this to a beginner").</li>
-                            <li>The AI will generate the video. You can then watch it, share it with a link, or download it.</li>
-                        </ol>
-                    </li>
-                    <li><strong>Best Use Case:</strong> You have a dense, 50-page research paper or a complex slide deck. Generate a Video Overview to get a quick, visual-and-auditory summary of the key concepts before you dive in.</li>
-                </ul>
-
-                <h3>5.2. Creating On-the-Go: Generating Audio Overviews</h3>
-                <p>This feature turns your sources into a "podcast-style" audio discussion.[1, 6]</p>
-                <ul>
-                    <li><strong>What it is:</strong> An audio file where AI "hosts" discuss and connect the ideas from your sources. They will "banter" and explore the material in a conversational way.[6]</li>
-                    <li><strong>How-to (Step-by-Step):</strong>
-                        <ol>
-                            <li>In the "Studio" panel, select <strong>"Audio Overview"</strong>.[5, 24]</li>
-                            <li><strong>Choose your format.</strong> This is a powerful new feature. You can select from formats like [7, 25]:
-                                <ul>
-                                    <li><strong>Deep Dive (Default):</strong> An in-depth conversation between two AI hosts.</li>
-                                    <li><strong>Brief:</strong> A short, single-host summary of the core ideas.</li>
-                                    <li><strong>Critique:</strong> Two hosts review your material (like an essay draft) and offer constructive feedback.</li>
-                                    <li><strong>Debate:</strong> Two hosts discuss differing perspectives on a topic found in your sources.</li>
-                                </ul>
-                            </li>
-                        </ol>
-                    </li>
-                    <li><strong>Best Use Case:</strong> Use "Debate" to prepare for a class discussion by hearing both sides of an argument. Use "Critique" to get feedback on your own essay. Use "Deep Dive" or "Brief" to review your notes while you're walking, commuting, or at the gym.[6, 26]</li>
-                </ul>
-
-                <h3>5.3. Activating Your Learning: Generating Study Tools</h3>
-                <p>This is one of the most practical features for students. NotebookLM can instantly create study aids from your sources.</p>
-                <ul>
-                    <li><strong>What it is:</strong> Interactive <strong>Flashcards</strong> and <strong>Quizzes</strong> based 100% on your lecture notes and textbooks.</li>
-                    <li><strong>How-to (Step-by-Step):</strong>
-                        <ol>
-                            <li>In the "Studio" panel, select <strong>"Flashcards"</strong> or <strong>"Quiz"</strong>.[8]</li>
-                            <li>You can specify what topics you want the cards/quiz to focus on, and even set the difficulty level.</li>
-                        </ol>
-                    </li>
-                    <li><strong>The "Active Tutoring" Feature:</strong> This is the best part. When you get a quiz question wrong or review a flashcard, there is an <strong>"explain"</strong> option. Clicking this prompts the AI to act as your personal tutor, explaining *why* an answer is correct or incorrect, complete with citations pointing back to your notes.</li>
-                </ul>
-
-                <h3>5.4. Synthesizing Knowledge: Generating Reports & Visuals</h3>
-                <p>The Studio Panel includes other powerful, one-click tools to synthesize your sources:</p>
-                <ul>
-                    <li><strong>Mind Maps:</strong> Creates a visual diagram showing the connections between concepts, people, and themes in your sources.</li>
-                    <li><strong>Reports (FAQ, Briefing Doc, Study Guide):</strong> Instantly formats your source material into a structured text document. You can generate a "Study Guide," an "FAQ" about your topic, a "Briefing Doc" for a project, or a "Timeline" of events.[1, 7, 27]</li>
-                </ul>
-
-                <p>To help you choose, here is a quick-reference "menu" for the Studio Panel.</p>
-                <table>
-                    <caption>Table 2: The Studio Panel - Your Generative Output Menu</caption>
-                    <thead>
-                        <tr>
-                            <th>Output Format</th>
-                            <th>What It Is</th>
-                            <th>Best For...</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Video Overview</strong></td>
-                            <td>An AI-narrated explainer video using text and images from your sources.</td>
-                            <td>A quick visual summary of a complex or long topic.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Audio Overview</strong></td>
-                            <td>A "podcast" with AI hosts discussing your sources in various formats (Debate, Critique, etc.).</td>
-                            <td>Reviewing material "on the go" (walking, commuting).</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Flashcards / Quiz</strong></td>
-                            <td>Interactive study aids with an "explain" feature.</td>
-                            <td>Active recall and preparing for an exam.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Mind Map</strong></td>
-                            <td>A visual diagram of concepts and their connections.</td>
-                            <td>Brainstorming and understanding relationships for a paper.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Report</strong> (Study Guide, FAQ, etc.)</td>
-                            <td>A structured text document that synthesizes your sources.[27]</td>
-                            <td>Creating a polished study guide or briefing to share.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="workflows">
-                <h2>Section 6: Advanced Workflows & Best Practices</h2>
-                <p>The real power of NotebookLM comes from combining these features. Here are a few "recipes" for students.</p>
-
-                <h3>Workflow 1: The "Lecture-to-Study" Pack</h3>
-                <p><span class="workflow-step">1. Input:</span> Add the <strong>YouTube URL</strong> for your class lecture  and the <strong>PDF</strong> of the assigned textbook chapter.[19]</p>
-                <p><span class="workflow-step">2. Process:</span> Ask the chat, "What were the three key concepts from the lecture that *were not* in the textbook?" Save the answer to your notes.</p>
-                <p><span class="workflow-step">3. Output:</span> Go to the Studio. Generate <strong>"Flashcards"</strong> for all key terms. Then, generate a <strong>"Brief" Audio Overview</strong> to listen to as a 5-minute refresher before your next class.</p>
-
-                <h3>Workflow 2: The "Research Paper De-constructor"</h3>
-                <p><span class="workflow-step">1. Input:</span> Upload 5-10 PDF research papers for your assignment.[15]</p>
-                <p><span class="workflow-step">2. Process:</span> Ask the chat, "Create a timeline of this research" or "Identify the key debates and disagreements between these authors.".[16]</p>
-                <p><span class="workflow-step">3. Output:</span> Go to the Studio. Generate a <strong>"Mind Map"</strong> to visualize the thematic connections. For the one paper you find most confusing, generate a <strong>"Video Overview"</strong> to get a visual walkthrough.</p>
-                
-                <h3>Workflow 3: The "Essay Feedback" Loop</h3>
-                <p><span class="workflow-step">1. Input:</span> Upload your <strong>Google Doc</strong> draft of an essay. Also, upload the <strong>PDF</strong> of the assignment prompt and the <strong>Web URL</strong> for a key source.</p>
-                <p><span class="workflow-step">2. Process:</span> Ask the chat, "Does my essay's thesis statement address all parts of the assignment prompt? List any missing elements."</p>
-                <p><span class="workflow-step">3. Output:</span> Go to the Studio. Generate an <strong>Audio Overview</strong> using the <strong>"Critique"</strong> format. Listen as the AI hosts offer constructive feedback on your draft's structure and flow.</p>
-
-                <h3>Best Practice: Use the Right Tool (Web vs. Mobile)</h3>
-                <p>NotebookLM has both a web app and a mobile app, but they are not the same. The web app is far more powerful.[8]</p>
-                <ul>
-                    <li>Use the <strong>Web App (on a computer)</strong> for all your "heavy lifting": creating notebooks, uploading complex sources (like YouTube/Audio), generating content in the Studio, and writing notes.</li>
-                    <li>Use the <strong>Mobile App</strong> for <strong>reviewing on the go</strong>.[8] It's perfect for flipping through the Flashcards you generated, listening to your Audio Overviews, or quickly checking a note.[8, 24]</li>
-                </ul>
-            </section>
-
-            <section id="conclusion">
-                <h2>Section 7: Conclusion and Further Learning</h2>
-                <p>NotebookLM has evolved into an essential partner for any student, researcher, or curious learner. By grounding itself in your sources, it provides a reliable and powerful way to engage with complex material. By mastering the "Input-Process-Output" workflow, you can turn passive reading and watching into active learning and creation.</p>
-                <p>For more detailed questions or troubleshooting, you can visit the official <strong>NotebookLM Help Center</strong>  or join the <strong>NotebookLM Community</strong> on platforms like Reddit.[5, 28]</p>
-            </section>
+  <div id="steps" class="bg-sky-50 p-8 rounded-xl border border-sky-200 mb-12 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center">Getting Started with NotebookLM</h2>
+    <div class="max-w-3xl mx-auto space-y-8">
+      <div class="flex items-start space-x-4">
+        <div class="step-number bg-sky-600 text-white font-bold rounded-full flex items-center justify-center text-xl">1</div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-800 mb-2">Create Your Notebook</h3>
+          <p class="text-lg text-slate-700">Visit <a href="https://notebooklm.google.com" class="text-sky-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">notebooklm.google.com</a> and click "New Notebook". Each notebook is a dedicated space for a specific module, topic, or assignment.</p>
+          <div class="bg-sky-100 p-3 rounded-lg mt-3 text-slate-700 border border-sky-200">
+            <strong>Organisation Tip:</strong> Create separate notebooks for each course module or major assignment to keep materials organised and focused.
+          </div>
         </div>
-    </main>
+      </div>
+      <div class="flex items-start space-x-4">
+        <div class="step-number bg-sky-600 text-white font-bold rounded-full flex items-center justify-center text-xl">2</div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-800 mb-2">Upload Your Sources</h3>
+          <p class="text-lg text-slate-700 mb-4">Add lecture slides, readings, textbook chapters, recorded lectures, or your own notes. NotebookLM can process multiple format types.</p>
+          <div class="bg-white p-4 rounded-lg border border-slate-200">
+            <h4 class="text-md font-semibold text-emerald-700 mb-2">Supported formats:</h4>
+            <ul class="list-disc list-inside text-slate-700 space-y-1">
+              <li><strong>Documents:</strong> PDFs, Google Docs, text files, Google Slides</li>
+              <li><strong>Web content:</strong> Websites, URLs, copied text</li>
+              <li><strong>Video:</strong> YouTube videos (processes transcripts)</li>
+              <li><strong>Audio:</strong> Audio recordings, MP3 files (transcribes content)</li>
+            </ul>
+            <p class="text-sm text-slate-600 mt-3">Free version: Up to 50 sources per notebook, 100 notebooks total.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-start space-x-4">
+        <div class="step-number bg-sky-600 text-white font-bold rounded-full flex items-center justify-center text-xl">3</div>
+        <div>
+          <h3 class="text-2xl font-semibold text-slate-800 mb-2">Start Creating Study Materials</h3>
+          <p class="text-lg text-slate-700">Use the automatic tools or chat interface to generate study materials, summaries, and practice questions. Every response includes citations showing exactly where the information came from.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="features" class="mb-12 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center">Complete Feature Guide</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="p-3 bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.636 5.636a9 9 0 0112.728 0m-12.728 0l-2.829 2.829m18.384-2.829l2.829 2.829M9 17v-6a3 3 0 013-3h0a3 3 0 013 3v6m-6 0h6" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-purple-700">Audio Overviews (Podcasts)</h3>
+        </div>
+        <p class="text-slate-600 mb-4">Generates engaging podcast-style conversations between two AI hosts who discuss and explain your materials. Perfect for revision whilst commuting or exercising.</p>
+        <div class="bg-purple-50 p-4 rounded-lg border border-purple-100 text-sm">
+          <h4 class="font-semibold text-purple-700 mb-2">How to use:</h4>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1">
+            <li>Upload your course materials.</li>
+            <li>Click "Notebook guide" in the bottom right corner.</li>
+            <li>Select "Audio Overview" from the options.</li>
+            <li>Listen, download (MP3), or share.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="p-3 bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-indigo-700">YouTube Video Processing</h3>
+        </div>
+        <p class="text-slate-600 mb-4">Upload YouTube lecture videos, and NotebookLM automatically transcribes them, allowing you to chat with the content, create summaries, and find key moments.</p>
+        <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100 text-sm">
+          <h4 class="font-semibold text-indigo-700 mb-2">Pro Tip:</h4>
+          <p class="text-slate-700">Combine video transcripts with lecture slides. Ask: "Compare what the lecturer explained in the video with the information on the slides."</p>
+        </div>
+      </div>
+
+      <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="p-3 bg-sky-100 rounded-full w-12 h-12 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-sky-700">Automatic Study Reports</h3>
+        </div>
+        <p class="text-slate-600 mb-4">Generate comprehensive study materials automatically from your sources. Click "Notebook guide" to create these reports.</p>
+        <div class="bg-sky-50 p-4 rounded-lg border border-sky-100 text-sm">
+          <h4 class="font-semibold text-sky-700 mb-2">Available Reports:</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-1">
+            <li><strong>Study Guide:</strong> Key concepts and main arguments.</li>
+            <li><strong>Briefing Document:</strong> Executive summary of essentials.</li>
+            <li><strong>FAQ:</strong> Generated questions and answers.</li>
+            <li><strong>Timeline:</strong> Chronological organisation of events.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="p-3 bg-rose-100 rounded-full w-12 h-12 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-rose-700">Custom Quizzes</h3>
+        </div>
+        <p class="text-slate-600 mb-4">Create tailored quizzes to test your understanding. NotebookLM generates questions directly from your uploaded sources with answers and explanations.</p>
+        <div class="bg-rose-50 p-4 rounded-lg border border-rose-100 text-sm">
+          <h4 class="font-semibold text-rose-700 mb-2">Example Prompts:</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-1">
+            <li>"Create a 10-question multiple choice quiz on photosynthesis."</li>
+            <li>"Generate 5 essay questions about the French Revolution."</li>
+            <li>"Make 15 true/false questions covering all uploaded materials."</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="p-3 bg-emerald-100 rounded-full w-12 h-12 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M5 11v2m14-2v2" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-emerald-700">Flashcard Generation</h3>
+        </div>
+        <p class="text-slate-600 mb-4">Generate flashcards for active recall practice. Create term-definition pairs, question-answer cards, or concept explanation cards from your materials.</p>
+        <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-100 text-sm">
+          <h4 class="font-semibold text-emerald-700 mb-2">Example Prompt:</h4>
+          <p class="text-slate-700">"Create 20 flashcards covering all key terms from my psychology notes. Include the term, its definition, and an example."</p>
+        </div>
+      </div>
+
+      <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="p-3 bg-amber-100 rounded-full w-12 h-12 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-amber-700">Concept Mapping</h3>
+        </div>
+        <p class="text-slate-600 mb-4">Create visual representations of relationships between concepts, map out complex processes, or generate timelines of events from your course materials.</p>
+        <div class="bg-amber-50 p-4 rounded-lg border border-amber-100 text-sm">
+          <h4 class="font-semibold text-amber-700 mb-2">Example Prompt:</h4>
+          <p class="text-slate-700">"Create a concept map showing how cellular respiration, photosynthesis, and the carbon cycle are interconnected."</p>
+        </div>
+      </div>
+
+      <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="p-3 bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-blue-700">Interactive Q&A with Citations</h3>
+        </div>
+        <p class="text-slate-600 mb-4">Chat with your course materials to deepen understanding. Every answer includes direct citations to the exact passage in your uploaded documents.</p>
+        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100 text-sm">
+          <h4 class="font-semibold text-blue-700 mb-2">Example Questions:</h4>
+           <ul class="list-disc list-inside text-slate-700 space-y-1">
+            <li>"Explain the main argument in Chapter 3 in simple terms."</li>
+            <li>"Compare Marx and Weber's views on capitalism based on the sources."</li>
+            <li>"What are the limitations of this approach?"</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-card bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="p-3 bg-cyan-100 rounded-full w-12 h-12 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-cyan-700">Note-Taking & Annotation</h3>
+        </div>
+        <p class="text-slate-600 mb-4">Create notes within NotebookLM that integrate with your sources. Pin important AI responses and highlight key passages from your sources to save them as notes.</p>
+
+        <div class="bg-cyan-50 p-4 rounded-lg border border-cyan-100 text-sm">
+          <h4 class="font-semibold text-cyan-700 mb-2">Features:</h4>
+           <ul class="list-disc list-inside text-slate-700 space-y-1">
+            <li><strong>Pin important responses:</strong> Save useful AI answers.</li>
+            <li><strong>Create notes from sources:</strong> Highlight and save passages.</li>
+            <li><strong>Export everything:</strong> Save notes to Google Docs.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="workflows" class="bg-white p-8 rounded-xl shadow-lg mb-12 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center">Practical Study Workflows</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      
+      <div class="bg-sky-50 p-6 rounded-lg border border-sky-200">
+        <h3 class="text-lg font-bold text-sky-700 mb-3">📖 Weekly Lecture Processing</h3>
+        <ol class="list-decimal list-inside text-slate-700 space-y-2">
+          <li>Upload lecture slides, video recording, and your notes.</li>
+          <li>Generate a study guide to identify key concepts.</li>
+          <li>Create 10-15 quiz questions for self-testing.</li>
+          <li>Generate an audio overview to listen to during your commute.</li>
+          <li>Make flashcards for new terminology.</li>
+        </ol>
+      </div>
+
+      <div class="bg-purple-50 p-6 rounded-lg border border-purple-200">
+        <h3 class="text-lg font-bold text-purple-700 mb-3">📚 Exam Revision Strategy</h3>
+        <ol class="list-decimal list-inside text-slate-700 space-y-2">
+          <li>Create one notebook per exam topic.</li>
+          <li>Upload all relevant readings, notes, and videos.</li>
+          <li>Generate comprehensive study guides and timelines.</li>
+          <li>Create progressive quizzes from easy to challenging.</li>
+          <li>Make audio overviews for final week revision.</li>
+        </ol>
+      </div>
+
+      <div class="bg-emerald-50 p-6 rounded-lg border border-emerald-200">
+        <h3 class="text-lg font-bold text-emerald-700 mb-3">✍️ Essay Research & Planning</h3>
+        <ol class="list-decimal list-inside text-slate-700 space-y-2">
+          <li>Upload all essay sources to one notebook.</li>
+          <li>Ask: "What are the main arguments about [topic] across all sources?"</li>
+          <li>Request: "Compare perspectives and identify points of disagreement."</li>
+          <li>Generate: "Key quotes supporting [argument] with citations."</li>
+          <li>Create an outline based on synthesised information.</li>
+        </ol>
+      </div>
+
+      <div class="bg-amber-50 p-6 rounded-lg border border-amber-200">
+        <h3 class="text-lg font-bold text-amber-700 mb-3">📹 Recorded Lecture Study</h3>
+        <ol class="list-decimal list-inside text-slate-700 space-y-2">
+          <li>Add YouTube URL or upload audio recording of lecture.</li>
+          <li>Ask specific questions about confusing parts.</li>
+          <li>Generate a study guide from the transcript.</li>
+          <li>Create a quiz on the lecture content.</li>
+          <li>Compare lecture content with textbook readings.</li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="limits" class="bg-amber-50 p-8 rounded-xl border border-amber-200 mb-12 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-amber-800 mb-6 text-center">⚠️ Important Limitations & Best Practices</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div>
+        <h3 class="text-xl font-semibold text-slate-700 mb-3">What to Remember</h3>
+        <ul class="list-disc list-inside space-y-2 text-slate-700">
+          <li>NotebookLM only uses your uploaded sources (no external web search).</li>
+          <li>Always verify citations by clicking through to source passages.</li>
+          <li>Free version: 100 notebooks, 50 sources each, 3 audio overviews per day.</li>
+          <li>Generated content is for learning, not for direct submission.</li>
+          <li>Check your university's AI policy before using for assignments.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-slate-700 mb-3">Best Practices</h3>
+        <ul class="list-disc list-inside space-y-2 text-slate-700">
+          <li>Upload high-quality, relevant sources only.</li>
+          <li>Organise notebooks by topic for better results.</li>
+          <li>Always click citations to verify information.</li>
+          <li>Combine NotebookLM with your own notes and thinking.</li>
+          <li>Test yourself regularly with generated quizzes.</li>
+          <li>Use multiple study methods (audio + visual + practice).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="tasks" class="bg-sky-50 p-8 rounded-xl border border-sky-200 scroll-mt-20">
+    <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">🚀 Your Getting Started Checklist</h2>
+    <div class="space-y-4 max-w-2xl mx-auto">
+      <label class="flex items-center space-x-3 text-slate-700 hover:bg-white p-3 rounded-lg transition-colors cursor-pointer border border-transparent hover:border-slate-200">
+        <input type="checkbox" class="w-5 h-5 text-sky-600 rounded focus:ring-sky-500">
+        <span>Visit <a href="https://notebooklm.google.com" class="text-sky-600 hover:underline font-semibold" target="_blank" rel="noopener noreferrer">notebooklm.google.com</a> and create your first notebook</span>
+      </label>
+      <label class="flex items-center space-x-3 text-slate-700 hover:bg-white p-3 rounded-lg transition-colors cursor-pointer border border-transparent hover:border-slate-200">
+        <input type="checkbox" class="w-5 h-5 text-sky-600 rounded focus:ring-sky-500">
+        <span>Upload lecture slides or course readings from your current module</span>
+      </label>
+      <label class="flex items-center space-x-3 text-slate-700 hover:bg-white p-3 rounded-lg transition-colors cursor-pointer border border-transparent hover:border-slate-200">
+        <input type="checkbox" class="w-5 h-5 text-sky-600 rounded focus:ring-sky-500">
+        <span>Generate your first audio overview and listen to it</span>
+      </label>
+      <label class="flex items-center space-x-3 text-slate-700 hover:bg-white p-3 rounded-lg transition-colors cursor-pointer border border-transparent hover:border-slate-200">
+        <input type="checkbox" class="w-5 h-5 text-sky-600 rounded focus:ring-sky-500">
+        <span>Create a study guide for your next exam topic</span>
+      </label>
+      <label class="flex items-center space-x-3 text-slate-700 hover:bg-white p-3 rounded-lg transition-colors cursor-pointer border border-transparent hover:border-slate-200">
+        <input type="checkbox" class="w-5 h-5 text-sky-600 rounded focus:ring-sky-500">
+        <span>Make 20 flashcards for key terminology in your course</span>
+      </label>
+      <label class="flex items-center space-x-3 text-slate-700 hover:bg-white p-3 rounded-lg transition-colors cursor-pointer border border-transparent hover:border-slate-200">
+        <input type="checkbox" class="w-5 h-5 text-sky-600 rounded focus:ring-sky-500">
+        <span>Generate a practice quiz and test yourself</span>
+      </label>
+      <label class="flex items-center space-x-3 text-slate-700 hover:bg-white p-3 rounded-lg transition-colors cursor-pointer border border-transparent hover:border-slate-200">
+        <input type="checkbox" class="w-5 h-5 text-sky-600 rounded focus:ring-sky-500">
+        <span>Upload a recorded lecture (YouTube or audio) and chat with it</span>
+      </label>
+      <label class="flex items-center space-x-3 text-slate-700 hover:bg-white p-3 rounded-lg transition-colors cursor-pointer border border-transparent hover:border-slate-200">
+        <input type="checkbox" class="w-5 h-5 text-sky-600 rounded focus:ring-sky-500">
+        <span>Create a concept map showing topic relationships</span>
+      </fabel>
+    </div>
+  </div>
+
+  <div class="text-center mt-12">
+    <a href="index.html" class="px-5 py-3 bg-slate-200 text-slate-700 font-medium rounded-lg hover:bg-slate-300 transition-colors">← Back to Home</a>
+  </div>
+</main>
+
 </body>
 </html>
